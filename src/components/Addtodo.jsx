@@ -16,9 +16,10 @@ function Addtodo({ LOCAL_STORAGE_KEY, tasks, setTasks }) {
 
   useEffect(() => {
     if (!localStorage.getItem(LOCAL_STORAGE_KEY)) {
-      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([]));
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify([tasks]));
+    } else {
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));
     }
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));
   }, [tasks]);
 
   return (
