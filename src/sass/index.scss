@@ -1,0 +1,120 @@
+@use './layout/normalize';
+@use './helpers/variables';
+
+.todo-wrapper {
+  background: linear-gradient(variables.$start-blue, variables.$end-blue);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+.todo-container {
+  background-color: #ECE2D0;
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+}
+
+.add-task-wrapper {
+  padding: 16px;
+  text-align: center;
+  opacity: 1;
+  background-color: variables.$start-blue;
+  color: #344767;
+  box-shadow: #00000024 0rem 0.25rem 1.25rem 0rem,
+  #00bbd466 0rem 0.4375rem 0.625rem -0.3125rem;
+}
+
+.task-input-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.input-field {
+  border: 0;
+  height: 30px;
+  margin: 0px;
+  width: 70%;
+  color: black;
+  background-color: white;
+  padding: 20px;
+  font-size: 18px;
+  outline: none;
+}
+
+.todo-task-list {
+  margin-top: 30px;
+}
+
+.task-input-field {
+  border: 0;
+  height: 30px;
+  margin: 0px;
+  width: 70%;
+  /* color: #495057; */
+  background-color: white;
+  padding: 20px;
+  font-size: 18px;
+  outline: none;
+}
+
+
+.heading-tasklist {
+  font-size: 24px;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.pending {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-sub {
+  width: 120px;
+  height: 40px;
+  padding: 0 3px;
+  background-color: #fff;
+  border: none;
+  letter-spacing: 0;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-sub:hover {
+  background-color: lightgrey;
+}
+
+.btn-add:hover {
+  color: white;
+  background-color: variables.$end-blue;
+}
+
+.btn-destroy-all:hover {
+  color: white;
+  background-color: red;
+}
+
+.btn-delete:hover {
+  color: white;
+  background-color: red;
+}
+
+.btn-edit:hover {
+  color: white;
+  background-color: variables.$end-blue;
+}
